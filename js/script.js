@@ -41,7 +41,7 @@
 
 	btnScrollTop.addEventListener("click", function(e) {
 		e.preventDefault();
-		$("html").animate({scrollTop: 0}, 1000, "swing");
+		$("html, body").animate({scrollTop: 0}, 1000, "swing");
 	});
 
 }());
