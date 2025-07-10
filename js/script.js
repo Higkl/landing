@@ -279,10 +279,6 @@ function deactivateOverlay() {
 
 
 
-<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"></script>
-<script>
-
   const firebaseConfig = {
     apiKey: "AIzaSyCfxuoMXAdPBE5FBwjz-K9U3hayaYr1vi4",
     authDomain: "new-project-a9673.firebaseapp.com",
@@ -299,7 +295,7 @@ db.collection("texts").add({ content: "текст 123" })
   .then(() => console.log("Текст отправлен!"))
   .catch(error => console.error("Ошибка:", error));
 
-</script>
+
 
 
 
