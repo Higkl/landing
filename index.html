@@ -396,12 +396,11 @@ const firebaseConfig = {
     appId: "1:745479113508:web:653d8ca5d86ec869d281b1"
 };
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+const app = initializeApp(firebaseConfig); // ✅ без firebase.
+const db = getFirestore(app);              // ✅ без firebase.
 
-db.collection("texts").add({ content: "текст 123" })
-  .then(() => console.log("Текст отправлен!"))
-  .catch(error => console.error("Ошибка:", error));
+await addDoc(collection(db, "texts"), { content: "текст 123" });
+console.log("Текст отправлен!");
 
 </script>
 
