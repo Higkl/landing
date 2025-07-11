@@ -396,8 +396,8 @@ const firebaseConfig = {
     appId: "1:745479113508:web:653d8ca5d86ec869d281b1"
 };
 
-const app = initializeApp(firebaseConfig); // ✅ без firebase.
-const db = getFirestore(app);              // ✅ без firebase.
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 await addDoc(collection(db, "texts"), { content: "текст 123" });
 console.log("Текст отправлен!");
