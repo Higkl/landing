@@ -401,11 +401,21 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-await addDoc(collection(db, "texts"), { content: "текст 123" });
-console.log("Текст отправлен!");
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+const docRef = doc(db, "files", "RgHdnLkyUsd3VzuK3RNx");
+await setDoc(docRef, {
+  key1: "новое значение 1"
+});
 
+	
+/*
+const querySnapshot = await getDocs(collection(db, "texts"));
+querySnapshot.forEach(doc => console.log(doc.id, doc.data()));
+*/
+	
 </script>
 
+	
 
 
 </body>
