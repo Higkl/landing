@@ -413,20 +413,11 @@ const docRef = doc(db, "files", "RgHdnLkyUsd3VzuK3RNx");
 await setDoc(docRef, {key1: "новое значение 123"}, {merge: true});
 */
 
-
+//получить текст:
 const docRef = doc(db, "files", "RgHdnLkyUsd3VzuK3RNx");
 const docSnap = await getDoc(docRef);
 const data = docSnap.data();
 console.log(data.key2);
-
-
-
-
-
-
-
-
-
 	
 </script>
 
