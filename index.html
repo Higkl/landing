@@ -408,9 +408,7 @@ const db = getFirestore(app);
 
 //перезапись документа:
 const docRef = doc(db, "files", "RgHdnLkyUsd3VzuK3RNx");
-await setDoc(docRef, {
-  key1: "новое значение 123"
-});
+await setDoc(docRef, {key1: "новое значение 123"}, {merge: true});
 	
 /*
 const querySnapshot = await getDocs(collection(db, "texts"));
