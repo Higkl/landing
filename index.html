@@ -389,6 +389,7 @@
     getFirestore,
     collection,
     addDoc,
+    getDocs,
     doc,
     setDoc
   } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
@@ -406,14 +407,26 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-//перезапись документа:
+/*
+//отправить текст:
 const docRef = doc(db, "files", "RgHdnLkyUsd3VzuK3RNx");
 await setDoc(docRef, {key1: "новое значение 123"}, {merge: true});
-	
-/*
-const querySnapshot = await getDocs(collection(db, "texts"));
-querySnapshot.forEach(doc => console.log(doc.id, doc.data()));
 */
+
+
+const docRef = doc(db, "files", "RgHdnLkyUsd3VzuK3RNx");
+const docSnap = await getDoc(docRef);
+const data = docSnap.data();
+console.log(data.key2);
+
+
+
+
+
+
+
+
+
 	
 </script>
 
