@@ -385,41 +385,6 @@
 
 	//setTimeout(function() {
 	//}, 7000);	
-
-	
-	fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec", {
-		method: "POST",
-		mode: "no-cors",
-		body: JSON.stringify({name: 'name12name', message: 'message123message'}),
-		headers: {
-			"Content-Type": "application/json"
-		}
-	});
-
-
-
-	function handleResponse(res) {
-	  return res.json();
-	}
-	
-	function handleData(data) {
-	  data.forEach(function(row) {
-	    console.log("Имя:", row.name);
-	    console.log("Сообщение:", row.message);
-	    console.log("----------");
-	  });
-	}
-	
-	function handleError(err) {
-	  console.error("Ошибка при получении данных", err);
-	}
-	
-	fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec")
-	  .then(handleResponse)
-	  .then(handleData)
-	  .catch(handleError);
-
-
 		
 	</script>
 
