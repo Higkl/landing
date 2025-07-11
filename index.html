@@ -382,25 +382,32 @@
 	<script src="js/script.js"></script>
 	
 	<script>
-	
-	const data = {
-		name: 'Имя123',
-		message: 'Данные123'
-	};
-	
-	fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec", {
-		method: "POST",
-		body: JSON.stringify(data),
-		headers: {
-			"Content-Type": "application/json"
-		}
-	})
-		.then(res => res.text())
-		.then(response => {
-			console.log("Ответ:", response);
-			alert("Отправлено!");
-		});
-	
+
+	setTimeout(function() {
+
+		const data = {
+			name: 'Имя123',
+			message: 'Данные123'
+		};
+		
+		fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec", {
+			method: "POST",
+			body: JSON.stringify(data),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		})
+			.then(res => res.text())
+			.then(response => {
+				console.log("Ответ:", response);
+				alert("Отправлено!");
+			});
+
+	}, 5000);	
+
+
+
+		
 	</script>
 
 
