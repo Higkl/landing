@@ -383,25 +383,18 @@
 	
 	<script>
 
-	setTimeout(function() {
-
-		const data = {
-			name: 'name123',
-			message: 'message123'
-		};
+	//setTimeout(function() {
 		
 		fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec", {
-		method: "POST",
-		mode: "no-cors",
-		body: JSON.stringify(data),
-		headers: {
-			"Content-Type": "application/json"
-		}
+			method: "POST",
+			mode: "no-cors",
+			body: JSON.stringify({name: 'name12345', message: 'message12345'}),
+			headers: {
+				"Content-Type": "application/json"
+			}
 		});
-		
-		alert("Данные отправлены! 👍");
 
-	}, 5000);	
+	//}, 7000);	
 
 
 		
