@@ -380,47 +380,29 @@
 
 	<script src="libs/jquery-3.4.0.min.js"></script>
 	<script src="js/script.js"></script>
-
-
-<script type="module">
-
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-  import {
-    getFirestore,
-    collection,
-    doc,
-    addDoc,
-    getDoc,  
-    getDocs,
-    setDoc
-  } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 	
-const firebaseConfig = {
-    apiKey: "AIzaSyCfxuoMXAdPBE5FBwjz-K9U3hayaYr1vi4",
-    authDomain: "new-project-a9673.firebaseapp.com",
-    projectId: "new-project-a9673",
-    storageBucket: "new-project-a9673.firebasestorage.app",
-    messagingSenderId: "745479113508",
-    appId: "1:745479113508:web:653d8ca5d86ec869d281b1"
-};
-
-//инициализация Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-/*
-//отправить текст:
-const docRef = doc(db, "files", "RgHdnLkyUsd3VzuK3RNx");
-await setDoc(docRef, {key1: "новое значение 123"}, {merge: true});
-*/
-
-//получить текст:
-const docRef = doc(db, "files", "RgHdnLkyUsd3VzuK3RNx");
-const docSnap = await getDoc(docRef);
-const data = docSnap.data();
-console.log(data.key2);
+	<script>
 	
-</script>
+	const data = {
+		name: 'Имя123',
+		message: 'Данные123'
+	};
+	
+	fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec", {
+		method: "POST",
+		body: JSON.stringify(data),
+		headers: {
+			"Content-Type": "application/json"
+		}
+	})
+		.then(res => res.text())
+		.then(response => {
+			console.log("Ответ:", response);
+			alert("Отправлено!");
+		});
+	
+	</script>
+
 
 
 
