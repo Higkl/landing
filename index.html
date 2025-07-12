@@ -386,7 +386,7 @@
 	setTimeout(function() {
 
 
-fetch('https://api.github.com/repos/higkl/landing/contents/file.txt', {
+fetch('https://api.github.com/repos/higkl/landing/contents/file3.txt', {
 	method: 'PUT',
 	headers: {
 		'Authorization': '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',
@@ -394,10 +394,10 @@ fetch('https://api.github.com/repos/higkl/landing/contents/file.txt', {
 		'Accept': 'application/vnd.github+json'
 	},
 	body: JSON.stringify({
-		message: 'Создан файл file.txt',
+		message: 'Создан файл',
 		content: btoa('Hello World'),
-		branch: 'master',
-		sha: '1e9cb0961c6ac89609eeaeb70d7090fd7fcfb1ad'
+		branch: 'main'
+		//sha: '1e9cb0961c6ac89609eeaeb70d7090fd7fcfb1ad'
 	})
 })
 .then(function(response) {
@@ -411,7 +411,7 @@ fetch('https://api.github.com/repos/higkl/landing/contents/file.txt', {
 });
 
 		
-	}, 7000);	
+	}, 9000);	
 		
 	</script>
 
