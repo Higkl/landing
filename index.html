@@ -384,6 +384,22 @@
 	<script>
 
 	//setTimeout(function() {
+
+
+fetch('https://raw.githubusercontent.com/higkl/landing/master/file.txt')
+	.then(function(response) {
+		return response.text();
+	})
+	.then(function(text) {
+		console.log(text);
+	})
+	.catch(function(error) {
+		console.error('Ошибка при загрузке:', error);
+	});
+	
+
+
+		
 	//}, 7000);	
 		
 	</script>
