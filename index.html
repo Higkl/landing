@@ -383,35 +383,9 @@
 	
 	<script>
 
-	setTimeout(function() {
+	//setTimeout(function() {
 
-
-fetch('https://api.github.com/repos/higkl/landing/contents/file.txt', {
-	method: 'PUT',
-	headers: {
-		'Authorization': 'ghp_s8rQG8kk85PJGJ' + '1hayiWA3LSX3eP3N0KnjvG',
-		'Content-Type': 'application/json',
-		'Accept': 'application/vnd.github+json'
-	},
-	body: JSON.stringify({
-		message: 'Создан файл',
-		content: btoa('Hello World'),
-		branch: 'master',
-		sha: '1e9cb0961c6ac89609eeaeb70d7090fd7fcfb1ad'
-	})
-})
-.then(function(response) {
-	return response.json();
-})
-.then(function(data) {
-	console.log('Файл создан:', data);
-})
-.catch(function(error) {
-	console.error('Ошибка:', error);
-});
-
-		
-	}, 9000);	
+	//}, 9000);	
 		
 	</script>
 
