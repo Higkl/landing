@@ -85,7 +85,7 @@
 
 /* ============  Form ============ */
 
-/*
+
 (function() {
 
 	function validate(inputFirstname, inputLastname, inputEmail, textareaMessage) {
@@ -192,7 +192,7 @@
 	});
 
 }());
-*/
+
 
 /* ============  Modal ============ */
 
