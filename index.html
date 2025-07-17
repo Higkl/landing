@@ -388,16 +388,27 @@ const btnSend = document.querySelector('.btn-send');
 
 btnSend.addEventListener('click', function() {
 
-//отправка данных в таблицу:
+//получение данных из таблицы:
 
-	fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec", {
-		method: "POST",
-		mode: "no-cors",
-		body: JSON.stringify({col1: textareaMessage.value, col2: textareaMessage.value}),
-		headers: {
-			"Content-Type": "application/json"
-		}
-	});
+	function handleResponse(res) {
+		return res.json();
+	}
+	
+	function handleData(data) {
+		data.forEach(function(row) {
+			textareaMessage.value = row.col1;
+		});
+	}
+	
+	function handleError(err) {
+		console.error("Ошибка при получении данных из таблицы", err);
+	}
+	
+	fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec")
+	.then(handleResponse)
+	.then(handleData)
+	.catch(handleError);
+
 
 });
 
