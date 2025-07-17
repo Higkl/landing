@@ -380,45 +380,6 @@
 
 	<script src="libs/jquery-3.4.0.min.js"></script>
 	<script src="js/script.js"></script>
-	
-	<script>
-
-const textareaMessage = document.querySelector('.textarea-message');
-const btnSend = document.querySelector('.btn-send');
-
-btnSend.addEventListener('click', function() {
-
-//получение данных из таблицы:
-
-	function handleResponse(res) {
-		return res.json();
-	}
-	
-	function handleData(data) {
-		data.forEach(function(row) {
-			textareaMessage.value = row.col1;
-		});
-	}
-	
-	function handleError(err) {
-		console.error("Ошибка при получении данных из таблицы", err);
-	}
-	
-	fetch("https://script.google.com/macros/s/AKfycbxpFxaB7YX3-toE3PG2GJ15zLZxA8wri8ui4bsmZHafIhJptzKhJ3cBRED7hBSMWFAd/exec")
-	.then(handleResponse)
-	.then(handleData)
-	.catch(handleError);
-
-
-});
-
-
-
-		
-	</script>
-
-
-
 
 </body>
 </html>
